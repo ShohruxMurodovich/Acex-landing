@@ -1,6 +1,6 @@
 <template>
   <div class="logo-wrapper">
-    <img src="/acex_logo_source.png" alt="ACEX Logo" class="logo-img" />
+    <img src="/acex_logo.png" alt="ACEX Logo" class="logo-img" />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 .logo-wrapper {
   display: flex;
   align-items: center;
-  height: 48px; /* Bigger size as requested */
+  height: 36px; /* Bigger size as requested */
 }
 
 .logo-img {
