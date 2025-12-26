@@ -1,0 +1,209 @@
+/* CSS Custom Properties (Variables) */
+:root {
+    /* Colors - Deep Graphite Theme (V3) */
+    --color-bg-primary: #0F1115;
+    /* Slightly richer than pure black */
+    --color-bg-secondary: #181A20;
+
+    /* Glass Effects */
+    --color-glass-surface: rgba(30, 32, 40, 0.4);
+    --color-glass-border: rgba(255, 255, 255, 0.08);
+    --color-glass-highlight: rgba(255, 255, 255, 0.03);
+    --backdrop-blur: 16px;
+
+    /* Text */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #94A3B8;
+    /* Slate-400, crisp and readable */
+    --color-text-muted: #64748B;
+
+    /* Brand Accents */
+    --color-accent-blue: #3B82F6;
+    --color-accent-purple: #8B5CF6;
+    --color-accent-pink: #EC4899;
+
+    /* Gradients V3 - Sophisticated */
+    --gradient-primary: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+    --gradient-glow: linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(59, 130, 246, 0.4) 100%);
+    --gradient-text: linear-gradient(90deg, #FFFFFF 0%, #CBD5E1 100%);
+    --gradient-text-accent: linear-gradient(90deg, #A78BFA 0%, #60A5FA 50%, #F472B6 100%);
+
+    /* Spacing - "Airy but Structured" */
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 1rem;
+    /* 16px */
+    --spacing-md: 1.5rem;
+    /* 24px */
+    --spacing-lg: 2.5rem;
+    /* 40px */
+    --spacing-xl: 4rem;
+    /* 64px */
+    --spacing-2xl: 6rem;
+    /* 96px */
+    --spacing-3xl: 8rem;
+    /* 128px */
+
+    /* Typography */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+    /* Slightly lighter bold for cleaner look */
+    --font-weight-black: 700;
+    /* Extra bold replaced with bold */
+    --line-height-body: 1.7;
+    /* More air for text */
+    --line-height-heading: 1.1;
+
+    /* Animations */
+    --transition-fast: 0.2s ease-out;
+    --transition-smooth: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 40px -10px rgba(124, 58, 237, 0.3);
+
+    /* Border Radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+/* Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--color-bg-primary);
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text-primary);
+    line-height: var(--line-height-heading);
+    letter-spacing: -0.025em;
+    /* Tighter headings */
+}
+
+h1 {
+    font-weight: var(--font-weight-black);
+}
+
+h2 {
+    font-weight: var(--font-weight-bold);
+}
+
+p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    /* Standard SaaS container */
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.text-gradient {
+    background: var(--gradient-text-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-bottom: 0.1em;
+    /* Fix clipping */
+}
+
+/* Section Spacing - Consistent Rhythm */
+.section {
+    padding: var(--spacing-3xl) 0;
+    /* 8rem / 128px */
+    position: relative;
+}
+
+/* Glassmorphism Card System (V3) */
+.glass-panel {
+    background: rgba(30, 32, 40, 0.6);
+    /* Slightly more opaque for better contrast */
+    backdrop-filter: blur(20px) saturate(180%);
+    /* Premium Apple-like glass */
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-smooth);
+}
+
+.glass-panel:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Buttons (V3) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 9999px;
+    /* Pill shape for premium feel */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all var(--transition-smooth);
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.4);
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+}
