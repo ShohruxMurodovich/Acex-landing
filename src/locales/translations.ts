@@ -15,7 +15,6 @@ export interface Translation {
         sectionTitle: string
         sectionSubtitle: string
         recommended: string
-        description: string
         perMonth: string
         orderPlan: string
         leadCost: string
@@ -66,7 +65,6 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             sectionSubtitle:
                 'Подберите план под ваши задачи. Честные условия, понятная структура и прогнозируемый результат.',
             recommended: 'Лучший выбор',
-            description: 'Подходит для уверенного старта и стабильного роста продаж',
             perMonth: '/мес',
             orderPlan: 'Выбрать тариф',
             leadCost: 'Таргет',
@@ -151,7 +149,6 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             sectionSubtitle:
                 'Maqsadingizga mos rejani tanlang. Shaffof narxlar va aniq natija.',
             recommended: 'Eng maqbul tanlov',
-            description: 'Ishonchli start va barqaror savdo o\'sishi uchun',
             perMonth: '/oy',
             orderPlan: 'Tarifni tanlash',
             leadCost: 'Target',
@@ -236,7 +233,6 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             sectionSubtitle:
                 'Choose the plan that fits your goals. Transparent pricing and measurable results.',
             recommended: 'Best Choice',
-            description: 'Great for confident launch and scalable sales growth',
             perMonth: '/mo',
             orderPlan: 'Choose Plan',
             leadCost: 'Target',

@@ -93,13 +93,55 @@ const { t } = useTranslation()
   min-height: auto;
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsive Styles */
+@media (max-width: 639px) {
   .header-wrapper {
-    top: 1rem;
+    top: 0.75rem;
+    padding: 0 0.75rem;
+  }
+  
+  .header-pill {
+    padding: 0.625rem 1rem; /* Reduced height for mobile */
+    border-radius: 50px; /* Slightly less rounded on mobile */
+  }
+
+  .logo {
+    flex-shrink: 0;
   }
   
   .nav-links {
-    display: none;
+    display: none; /* Hide navigation links on mobile */
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem; /* Smaller text */
+    white-space: nowrap;
   }
 }
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .header-wrapper {
+    top: 0.875rem;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
 </style>

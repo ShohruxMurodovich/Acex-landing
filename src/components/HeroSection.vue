@@ -86,13 +86,56 @@ const { t } = useTranslation()
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsive Styles */
+@media (max-width: 639px) {
+  .hero {
+    min-height: 100svh; /* Use small viewport height for mobile browsers */
+    padding-top: 80px; /* Account for fixed header */
+  }
+
+  .hero-title {
+    font-size: 2.25rem; /* Significantly smaller for mobile */
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem; /* Extra padding on mobile */
+  }
+
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
   .hero-title {
     font-size: 2.75rem;
+    margin-bottom: 1.5rem;
   }
   
   .hero-subtitle {
     font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-lg {
+    padding: 0.9375rem 2.25rem;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-title {
+    font-size: 3.25rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1875rem;
+  }
+}
+
 </style>

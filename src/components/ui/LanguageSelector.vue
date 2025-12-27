@@ -169,13 +169,39 @@ onUnmounted(() => {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsive Styles */
+@media (max-width: 639px) {
   .lang-button {
-    padding: 0.4rem 0.75rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
   }
   
   .lang-code {
-    display: none;
+    font-size: 0.75rem;
+  }
+
+  .lang-dropdown {
+    min-width: 140px;
+  }
+
+  .lang-option {
+    padding: 0.875rem 1rem; /* Larger touch target */
+    font-size: 0.9375rem;
+  }
+
+  .flag {
+    font-size: 1.125rem;
+  }
+
+  .label {
+    font-size: 0.875rem;
   }
 }
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .lang-button {
+    padding: 0.4375rem 0.8125rem;
+  }
+}
+
 </style>

@@ -8,7 +8,6 @@
     <div class="card-body">
       <div class="tier-header">
         <h3 class="tier-name">{{ tier }}</h3>
-        <p class="tier-desc">{{ t('pricing.description') }}</p>
       </div>
 
       <div class="price-block">
@@ -128,11 +127,6 @@ defineProps<{
   color: var(--color-text-primary);
 }
 
-.tier-desc {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-}
-
 .price-block {
   display: flex;
   align-items: baseline;
@@ -212,4 +206,76 @@ defineProps<{
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 639px) {
+  .card-body {
+    padding: 1.5rem; /* Reduced from 2.5rem */
+  }
+
+  .tier-header {
+    margin-bottom: 1rem;
+  }
+
+  .tier-name {
+    font-size: 1.125rem;
+  }
+
+  .price-block {
+    margin-bottom: 1.25rem;
+  }
+
+  .currency {
+    font-size: 1.25rem;
+  }
+
+  .amount {
+    font-size: 2.75rem; /* Reduced from 3.5rem */
+  }
+
+  .period {
+    font-size: 0.875rem;
+  }
+
+  .divider {
+    margin-bottom: 1.5rem;
+  }
+
+  .features-list {
+    gap: 0.875rem;
+  }
+
+  .feature-item {
+    font-size: 0.875rem;
+  }
+
+  .check-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .card-footer {
+    margin-top: 2rem;
+  }
+
+  .popular-msg {
+    font-size: 0.6875rem;
+    padding: 3px 10px;
+  }
+
+  .pricing-card.popular {
+    transform: scale(1); /* No scale on mobile */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .card-body {
+    padding: 2rem;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+}
+
 </style>

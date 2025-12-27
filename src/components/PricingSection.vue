@@ -67,11 +67,46 @@ const vipFeatures = computed(() => tArray('pricing.vip.features'))
   align-items: start;
 }
 
-@media (max-width: 1024px) {
+/* Mobile Responsive Styles */
+@media (max-width: 639px) {
+  .text-4xl { 
+    font-size: 1.875rem; /* Smaller on mobile */
+  }
+
+  .mb-4 { margin-bottom: 0.75rem; }
+  .mb-5 { margin-bottom: 2rem; }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .text-4xl { 
+    font-size: 2.125rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
   }
 }
+
+@media (min-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 </style>

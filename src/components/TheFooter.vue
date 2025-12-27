@@ -56,10 +56,38 @@ const currentYear = computed(() => new Date().getFullYear())
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsive Styles */
+@media (max-width: 639px) {
+  .footer {
+    padding: 2rem 0 1.5rem;
+    margin-top: 3rem;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.25rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.875rem;
+  }
+
+  .footer-info {
+    font-size: 0.75rem;
   }
 }
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
 </style>
