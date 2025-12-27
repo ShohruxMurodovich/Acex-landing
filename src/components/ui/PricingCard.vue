@@ -27,13 +27,14 @@
       </ul>
 
       <div class="card-footer">
-        <button 
+        <a 
+          :href="link"
+          target="_blank"
           class="btn w-full" 
           :class="isPopular ? 'btn-primary' : 'btn-outline'"
-          @click="handleOrder"
         >
           Оформить тариф
-        </button>
+        </a>
         <p class="lead-cost">Target: {{ leadCost }}</p>
       </div>
     </div>
@@ -49,11 +50,8 @@ defineProps<{
   leadCost: string
   features: string[]
   isPopular?: boolean
+  link: string
 }>()
-
-const handleOrder = () => {
-  console.log('Order clicked')
-}
 </script>
 
 <style scoped>

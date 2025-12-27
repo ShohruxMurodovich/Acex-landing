@@ -15,14 +15,7 @@
           :price="600"
           lead-cost="от $0.50 за лид"
           :features="premiumFeatures"
-        />
-        
-        <PricingCard
-          tier="VIP"
-          :price="1200"
-          lead-cost="от $0.50 за лид"
-          :features="vipFeatures"
-          :is-popular="true"
+          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20PREMIUM"
         />
         
         <PricingCard
@@ -30,6 +23,16 @@
           :price="900"
           lead-cost="от $0.50 за лид"
           :features="standardFeatures"
+          :is-popular="true"
+          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20STANDARD"
+        />
+        
+        <PricingCard
+          tier="VIP"
+          :price="1200"
+          lead-cost="от $0.50 за лид"
+          :features="vipFeatures"
+          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20VIP"
         />
       </div>
     </div>
