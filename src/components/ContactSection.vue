@@ -20,8 +20,8 @@
             <ContactCard
               :icon="InstagramIcon"
               label="Instagram"
-              value="@acex_marketing"
-              link="https://instagram.com/acex_marketing"
+              value="@acex.smm"
+              link="https://www.instagram.com/acex.smm/"
             />
             <ContactCard
               :icon="PhoneIcon"
