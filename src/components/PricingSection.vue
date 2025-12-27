@@ -2,10 +2,9 @@
   <section id="pricing" class="section">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="text-4xl font-bold mb-4">Тарифы</h2>
+        <h2 class="text-4xl font-bold mb-4">{{ t('pricing.sectionTitle') }}</h2>
         <p class="text-secondary max-w-2xl mx-auto">
-          Выберите оптимальный план для роста вашего бизнеса. <br/>
-          Прозрачные условия и максимальная отдача.
+          {{ t('pricing.sectionSubtitle') }}
         </p>
       </div>
       
@@ -13,7 +12,7 @@
         <PricingCard
           tier="PREMIUM"
           :price="600"
-          lead-cost="от $0.50 за лид"
+          :lead-cost="`${t('pricing.leadCost')}: от $0.50 за лид`"
           :features="premiumFeatures"
           link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20PREMIUM"
         />
@@ -21,7 +20,7 @@
         <PricingCard
           tier="STANDARD"
           :price="900"
-          lead-cost="от $0.50 за лид"
+          :lead-cost="`${t('pricing.leadCost')}: от $0.50 за лид`"
           :features="standardFeatures"
           :is-popular="true"
           link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20STANDARD"
@@ -30,7 +29,7 @@
         <PricingCard
           tier="VIP"
           :price="1200"
-          lead-cost="от $0.50 за лид"
+          :lead-cost="`${t('pricing.leadCost')}: от $0.50 за лид`"
           :features="vipFeatures"
           link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20VIP"
         />
@@ -40,47 +39,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import PricingCard from './ui/PricingCard.vue'
+import { useTranslation } from '../composables/useTranslation'
 
-const premiumFeatures = [
-  '6 видеопостов',
-  '6 SMD или карусель-постов',
-  '20 сторис',
-  'Instagram, Telegram, FB, YouTube',
-  'Рекламная стратегия',
-  'Анализ конкурентов',
-  'Целевая аудитория',
-  'Управление бюджетом',
-  'Оптимизация таргета',
-  'Отчёты'
-]
+const { t, tArray } = useTranslation()
 
-const vipFeatures = [
-  '15 видеопостов',
-  '10 SMD или карусель-постов',
-  '40 сторис',
-  'Все площадки + YouTube',
-  'Полная стратегия',
-  'Глубокий анализ',
-  'Портрет ЦА + Клиента',
-  'Воронка продаж',
-  'Лид-магнит',
-  'Сценарии продаж',
-  'Годовая стратегия'
-]
-
-const standardFeatures = [
-  '12 видеопостов',
-  '8 SMD или карусель-постов',
-  '30 сторис',
-  'Instagram, Telegram, FB',
-  'Базовая стратегия',
-  'Анализ конкурентов',
-  'Целевая аудитория',
-  'Управление бюджетом',
-  'Оптимизация',
-  'Отчёты'
-]
+const premiumFeatures = computed(() => tArray('pricing.premium.features'))
+const standardFeatures = computed(() => tArray('pricing.standard.features'))
+const vipFeatures = computed(() => tArray('pricing.vip.features'))
 </script>
 
 <style scoped>

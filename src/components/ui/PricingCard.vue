@@ -2,19 +2,19 @@
   <div class="pricing-card glass-panel" :class="{ 'popular': isPopular }">
     <div v-if="isPopular" class="popular-msg">
       <span class="pulse-dot"></span>
-      Рекомендуемый выбор
+      {{ t('pricing.recommended') }}
     </div>
     
     <div class="card-body">
       <div class="tier-header">
         <h3 class="tier-name">{{ tier }}</h3>
-        <p class="tier-desc">Для уверенного старта и роста продаж</p>
+        <p class="tier-desc">{{ t('pricing.description') }}</p>
       </div>
 
       <div class="price-block">
         <span class="currency">$</span>
         <span class="amount">{{ price }}</span>
-        <span class="period">/мес</span>
+        <span class="period">{{ t('pricing.perMonth') }}</span>
       </div>
       
       <div class="divider"></div>
@@ -33,9 +33,9 @@
           class="btn w-full" 
           :class="isPopular ? 'btn-primary' : 'btn-outline'"
         >
-          Оформить тариф
+          {{ t('pricing.orderPlan') }}
         </a>
-        <p class="lead-cost">Target: {{ leadCost }}</p>
+        <p class="lead-cost">{{ leadCost }}</p>
       </div>
     </div>
   </div>
@@ -43,6 +43,9 @@
 
 <script setup lang="ts">
 import { Check as CheckIcon } from 'lucide-vue-next'
+import { useTranslation } from '../../composables/useTranslation'
+
+const { t } = useTranslation()
 
 defineProps<{
   tier: string

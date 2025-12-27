@@ -7,14 +7,15 @@
         </div>
         
         <ul class="nav-links">
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#pricing">Тарифы</a></li>
-          <li><a href="#contact">Контакты</a></li>
+          <li><a href="#services">{{ t('header.services') }}</a></li>
+          <li><a href="#pricing">{{ t('header.pricing') }}</a></li>
+          <li><a href="#contact">{{ t('header.contact') }}</a></li>
         </ul>
 
-        <div class="header-cta">
+        <div class="header-actions">
+          <LanguageSelector />
           <a href="#contact" class="btn btn-sm btn-primary">
-            Получить аудит
+            {{ t('header.getAudit') }}
           </a>
         </div>
       </nav>
@@ -24,6 +25,10 @@
 
 <script setup lang="ts">
 import TheLogo from './ui/TheLogo.vue'
+import LanguageSelector from './ui/LanguageSelector.vue'
+import { useTranslation } from '../composables/useTranslation'
+
+const { t } = useTranslation()
 </script>
 
 <style scoped>
@@ -74,6 +79,12 @@ import TheLogo from './ui/TheLogo.vue'
 .nav-links a:hover {
   color: white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .btn-sm {

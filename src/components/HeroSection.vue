@@ -2,18 +2,16 @@
   <section id="services" class="hero section">
     <div class="container">
       <div class="hero-content">
-        <div class="badge fade-in-up">Marketing Agency 2025</div>
         <h1 class="hero-title fade-in-up delay-100">
-          Профессиональный <br />
-          <span class="text-gradient">SMM и Таргет</span>
+          {{ t('hero.title') }} <br />
+          <span class="text-gradient">{{ t('hero.titleHighlight') }}</span>
         </h1>
         <p class="hero-subtitle fade-in-up delay-200">
-          Комплексное продвижение вашего бизнеса в социальных сетях. 
-          Стратегия, контент и реклама, которые приносят реальные продажи.
+          {{ t('hero.subtitle') }}
         </p>
         <div class="fade-in-up delay-300">
           <a href="#contact" class="btn btn-primary btn-lg">
-            Получить консультацию
+            {{ t('hero.ctaButton') }}
           </a>
         </div>
       </div>
@@ -21,9 +19,18 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { useTranslation } from '../composables/useTranslation'
+
+const { t } = useTranslation()
+</script>
+
 <style scoped>
 .hero {
-  padding: 160px 0 100px; /* Airy spacing */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   /* Top subtle glow using pseudo-element or multiple backgrounds */
   background: 
@@ -39,17 +46,6 @@
   align-items: center;
 }
 
-.badge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 99px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  margin-bottom: 2rem;
-}
 
 .hero-title {
   font-size: 4rem; /* Reduced slightly from 4.5 for cleaner look, but bolder */

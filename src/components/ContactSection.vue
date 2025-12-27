@@ -4,28 +4,27 @@
       <div class="contact-grid">
         <!-- Text & Links Column -->
         <div class="contact-info fade-in-up">
-          <h2 class="section-title">Свяжитесь с нами</h2>
+          <h2 class="section-title">{{ t('contact.sectionTitle') }}</h2>
           <p class="section-desc">
-            Обсудим ваш проект и подберем лучшую стратегию роста. 
-            Мы всегда онлайн.
+            {{ t('contact.sectionSubtitle') }}
           </p>
           
           <div class="links-stack">
             <ContactCard
               :icon="SendIcon"
-              label="Telegram"
+              :label="t('contact.telegram')"
               value="@acex_admin"
               link="https://t.me/acex_admin"
             />
             <ContactCard
               :icon="InstagramIcon"
-              label="Instagram"
+              :label="t('contact.instagram')"
               value="@acex.smm"
               link="https://www.instagram.com/acex.smm/"
             />
             <ContactCard
               :icon="PhoneIcon"
-              label="Phone"
+              :label="t('contact.phone')"
               value="+998 91 192 75 00"
               link="tel:+998911927500"
             />
@@ -34,18 +33,17 @@
         
         <!-- Audit CTA Column -->
         <div class="audit-block glass-panel fade-in-up delay-100">
-          <div class="audit-badge">Бесплатно</div>
-          <h3>Аудит вашего SMM</h3>
+          <div class="audit-badge">{{ t('contact.free') }}</div>
+          <h3>{{ t('contact.auditTitle') }}</h3>
           <p>
-            Получите профессиональный разбор аккаунта. 
-            Укажем на ошибки и точки роста продаж.
+            {{ t('contact.auditDescription') }}
           </p>
           <a
             href="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20получить%20бесплатный%20аудит%20ACEX%20😊"
             target="_blank"
             class="btn btn-primary w-full"
           >
-            Получить разбор
+            {{ t('contact.getAnalysis') }}
             <ArrowRightIcon :size="18" />
           </a>
         </div>
@@ -57,6 +55,9 @@
 <script setup lang="ts">
 import { Send as SendIcon, Instagram as InstagramIcon, Phone as PhoneIcon, ArrowRight as ArrowRightIcon } from 'lucide-vue-next'
 import ContactCard from './ui/ContactCard.vue'
+import { useTranslation } from '../composables/useTranslation'
+
+const { t } = useTranslation()
 </script>
 
 <style scoped>
