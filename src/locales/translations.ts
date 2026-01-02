@@ -34,7 +34,6 @@ export interface Translation {
         telegram: string
         instagram: string
         phone: string
-        free: string
         auditTitle: string
         auditDescription: string
         getAnalysis: string
@@ -51,14 +50,14 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             services: 'Услуги',
             pricing: 'Тарифы',
             contact: 'Контакты',
-            getAudit: 'Получить аудит'
+            getAudit: 'Купить тариф'
         },
         hero: {
             title: 'Профессиональный',
             titleHighlight: 'SMM и таргет',
             subtitle:
                 'Продвигаем ваш бизнес в соцсетях системно: стратегия, контент и реклама, которые приводят клиентов и увеличивают прибыль.',
-            ctaButton: 'Записаться на консультацию'
+            ctaButton: 'Выбрать тариф'
         },
         pricing: {
             sectionTitle: 'Тарифы',
@@ -87,7 +86,7 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
                     '12 видеопостов',
                     '8 SMD или карусель-постов',
                     '30 сторис',
-                    'Instagram, Telegram, FB',
+                    'Instagram, Telegram, FB, YouTube',
                     'Базовая стратегия продвижения',
                     'Анализ конкурентов',
                     'Определение целевой аудитории',
@@ -119,11 +118,10 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             telegram: 'Telegram',
             instagram: 'Instagram',
             phone: 'Телефон',
-            free: 'Бесплатно',
-            auditTitle: 'Аудит вашего SMM',
+            auditTitle: 'Выберите тариф',
             auditDescription:
-                'Разберём ваш аккаунт, покажем слабые места и предложим точки роста, которые дадут результат.',
-            getAnalysis: 'Получить аудит'
+                'Подберём оптимальный план продвижения под ваши задачи и бюджет. Начните расти уже сегодня.',
+            getAnalysis: 'Заказать тариф'
         },
         footer: {
             tagline: 'Ваш результат — наша главная цель',
@@ -135,14 +133,14 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             services: 'Xizmatlar',
             pricing: 'Tariflar',
             contact: 'Aloqa',
-            getAudit: 'Audit olish'
+            getAudit: 'Tarif sotib olish'
         },
         hero: {
             title: 'Professional',
             titleHighlight: 'SMM va Target',
             subtitle:
                 'Biznesingizni ijtimoiy tarmoqlarda tizimli ravishda rivojlantiramiz: strategiya, kontent va mijoz olib keladigan reklama.',
-            ctaButton: 'Konsultatsiyaga yozilish'
+            ctaButton: 'Tarif tanlash'
         },
         pricing: {
             sectionTitle: 'Tariflar',
@@ -171,7 +169,7 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
                     '12 ta video post',
                     '8 ta SMD yoki karusel post',
                     '30 ta stories',
-                    'Instagram, Telegram, FB',
+                    'Instagram, Telegram, FB, YouTube',
                     'Asosiy SMM strategiya',
                     'Raqobatchilar tahlili',
                     'Maqsadli auditoriya',
@@ -203,11 +201,10 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             telegram: 'Telegram',
             instagram: 'Instagram',
             phone: 'Telefon',
-            free: 'Bepul',
-            auditTitle: 'SMM auditingiz',
+            auditTitle: 'Tarif tanlang',
             auditDescription:
-                'Akkauntingizni tahlil qilib, xatolar va o\'sish nuqtalarini ko\'rsatib beramiz.',
-            getAnalysis: 'Audit olish'
+                'Maqsad va byudjetingizga eng mos tarifni tanlaymiz. Bugundan boshlab o\'sing.',
+            getAnalysis: 'Tarif buyurtma qilish'
         },
         footer: {
             tagline: 'Sizning natijangiz — bizning maqsadimiz',
@@ -219,14 +216,14 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             services: 'Services',
             pricing: 'Pricing',
             contact: 'Contacts',
-            getAudit: 'Request Audit'
+            getAudit: 'Buy Plan'
         },
         hero: {
             title: 'Professional',
             titleHighlight: 'SMM & Targeting',
             subtitle:
                 'We grow your brand on social media with strategy, content, and ads designed to attract real clients and drive revenue.',
-            ctaButton: 'Book a Consultation'
+            ctaButton: 'Choose Plan'
         },
         pricing: {
             sectionTitle: 'Pricing Plans',
@@ -255,7 +252,7 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
                     '12 video posts',
                     '8 SMD or carousel posts',
                     '30 stories',
-                    'Instagram, Telegram, FB',
+                    'Instagram, Telegram, FB, YouTube',
                     'Basic promotion strategy',
                     'Competitor research',
                     'Target audience',
@@ -287,11 +284,10 @@ export const translations: Record<'ru' | 'uz' | 'en', Translation> = {
             telegram: 'Telegram',
             instagram: 'Instagram',
             phone: 'Phone',
-            free: 'Free',
-            auditTitle: 'SMM Audit',
+            auditTitle: 'Choose Your Plan',
             auditDescription:
-                'We analyze your account, highlight weak spots, and show practical growth opportunities.',
-            getAnalysis: 'Request Audit'
+                'We\'ll help you select the best plan for your goals and budget. Start growing today.',
+            getAnalysis: 'Order Plan'
         },
         footer: {
             tagline: 'Your results — our priority',

@@ -33,13 +33,12 @@
         
         <!-- Audit CTA Column -->
         <div class="audit-block glass-panel fade-in-up delay-100">
-          <div class="audit-badge">{{ t('contact.free') }}</div>
           <h3>{{ t('contact.auditTitle') }}</h3>
           <p>
             {{ t('contact.auditDescription') }}
           </p>
           <a
-            href="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20получить%20бесплатный%20аудит%20ACEX%20😊"
+            href="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20заказать%20тариф%20ACEX%20😊"
             target="_blank"
             class="btn btn-primary w-full"
           >

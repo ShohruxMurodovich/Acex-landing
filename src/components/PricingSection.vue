@@ -10,28 +10,28 @@
       
       <div class="pricing-grid">
         <PricingCard
-          tier="PREMIUM"
+          tier="Старт"
           :price="600"
           :lead-cost="`${t('pricing.leadCost')}: от $0.50 за лид`"
           :features="premiumFeatures"
-          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20PREMIUM"
+          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20Старт"
         />
         
         <PricingCard
-          tier="STANDARD"
+          tier="Премиум"
           :price="900"
           :lead-cost="`${t('pricing.leadCost')}: от $0.50 за лид`"
           :features="standardFeatures"
           :is-popular="true"
-          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20STANDARD"
+          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20Премиум"
         />
         
         <PricingCard
-          tier="VIP"
+          tier="ВИП"
           :price="1200"
           :lead-cost="`${t('pricing.leadCost')}: от $0.50 за лид`"
           :features="vipFeatures"
-          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20VIP"
+          link="https://t.me/acex_admin?text=Здравствуйте!%20Хочу%20оформить%20тариф%20ВИП"
         />
       </div>
     </div>
