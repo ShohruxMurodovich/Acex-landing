@@ -1,0 +1,12 @@
+# Netlify redirects and headers
+/*    /index.html   200
+
+# Set correct MIME types
+/*.js
+  Content-Type: application/javascript
+
+/*.mjs
+  Content-Type: application/javascript
+
+/*.css
+  Content-Type: text/css
